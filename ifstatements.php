@@ -9,24 +9,22 @@
 <!-- <script src="main.js"></script> -->
 </head>
 <body>
-<!-- <form action="functions.php" method="post">
-
-<input type="submit" name="form_posted">
-</form> -->
-<br>
 <?php 
+$isMale = true;
+$isTall = true;
 
-    function sayHi($name){
-        echo "Hello $name <br>";
-    }
-    $character = "James";
-sayHi($character);
-
-function cube($num){
- return $num * $num * $num;
+if ($isMale && $isTall){
+    echo "You are male and Tall";
+} elseif ($isMale && !$isTall) {
+    echo "You are male and not tall";
+} elseif (!$isMale && !$isTall){
+    echo "You are not male or and you are not tall";
+} elseif (!$isMale && $isTall){
+    echo "You are not male and you are tall";
+} else {
+    echo "error";
 }
-$cubeResult = cube(4);
-echo $cubeResult;
+
 
 
 ?>
