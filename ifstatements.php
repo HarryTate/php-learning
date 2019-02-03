@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>PHP Learning</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
-<!-- <script src="main.js"></script> -->
-</head>
-<body>
-<?php 
+<?php
+include 'header.php';
+
 $isMale = true;
 $isTall = true;
 
@@ -24,6 +15,19 @@ if ($isMale && $isTall){
 } else {
     echo "error";
 }
+?>
+<br>
+<?php
+function getMax($num1,$num2) {
+    if($num1 > $num2){
+        echo "Number 1 is greater";
+    } elseif($num2 > $num1){
+        echo "Number 2 is greater than number 1";
+    } else {
+        echo "Numbers are equal";
+    }
+}
+getMax(1,1);
 
 
 
