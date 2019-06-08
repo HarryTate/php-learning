@@ -22,7 +22,31 @@ function stringConcat($string1, $string2, $string3)
 }
 echo stringConcat("Build ", " me ", "a sentence");
 
+function newCalc($num1, $num2)
+{
+    return $num1 + $num2;
+}
 ?>
+
+
+<h2>Calc returns:</h2>
+<?php
+echo newCalc(24, 60);
+?>
+<h2>Print Red sentence function:</h2>
+
+<?php
+function printSentenceRed($sentence)
+{
+    echo "<h3 style='color: #e72020;'>" . $sentence . "</h3>";
+}
+printSentenceRed("This is the first senctence.");
+printSentenceRed("This is the second senctence.");
+printSentenceRed("This is the third senctence.");
+printSentenceRed("This is the fourth senctence.");
+
+?>
+
 </body>
 
 </html>
