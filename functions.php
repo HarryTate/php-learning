@@ -38,12 +38,15 @@ echo newCalc(24, 60);
 <?php
 function printSentenceRed($sentence)
 {
-    echo "<h3 style='color: #e72020;'>" . $sentence . "</h3>";
+    ?> <h3 style='color: #e72020;'> <?php echo $sentence; ?> </h3>
+<?php
 }
 printSentenceRed("This is the first senctence.");
 printSentenceRed("This is the second senctence.");
 printSentenceRed("This is the third senctence.");
 printSentenceRed("This is the fourth senctence.");
+printSentenceRed("More red sentences.");
+
 
 ?>
 
