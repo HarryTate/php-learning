@@ -2,7 +2,7 @@
      This does not contain real password or username and is only intended to show what is contained in the real connection file -->
 <?php
 $servername = Server Here;
-$username = Username hare;
+$username = Username Here;
 $password = Password Here;
 $dbname = Database Name Here;
 // Create connection
