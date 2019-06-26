@@ -1,4 +1,7 @@
 <?php
+session_start();
+include_once 'dbusersconn.inc.php';
+$id = $_SESSION['id'];
 
 if (isset($_POST['submit'])) {
     $file = $_FILES['file'];
@@ -22,13 +25,15 @@ if (isset($_POST['submit'])) {
             // Sets file limit
             if ($fileSize < 500000) {
                 // Renames image and give it a unique id
-                $fileNameNew = uniqid('', true) . "." . $fileActualExt;
+                $fileNameNew = "profile" . $id . "." . $fileActualExt;
                 // Sets destination of files to be uploaded
                 $fileDestination = '../uploads/' . $fileNameNew;
                 // Moves temp file into file destination
                 move_uploaded_file($fileTmpName, $fileDestination);
                 // Returns to previous page
-                header("Location: ../uploadfile.php?uploadsuccess");
+                $sql = "UPDATE profileimg SET status'0 WHERE userid='$id';";
+                $result = mysqli_query($conn, $sql);
+                header("Location: ../uploadfiletodatabase.php?uploadsuccess");
             } else {
                 echo "Max file size exceeded. 500MB limit";
             }
