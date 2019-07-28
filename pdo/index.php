@@ -64,11 +64,11 @@ $is_published = true;
 // echo $post->body;
 
 // GET ROW COUNT
-$stmt = $pdo->prepare('SELECT * FROM posts WHERE author = ?');
-$stmt->execute([$author]);
+// $stmt = $pdo->prepare('SELECT * FROM posts WHERE author = ?');
+// $stmt->execute([$author]);
 // Counts number of rows
-$postCount = $stmt->rowCount();
-echo $postCount;
+// $postCount = $stmt->rowCount();
+// echo $postCount;
 
 // INSERT DATA
 // $title = 'Post five';
@@ -81,10 +81,31 @@ echo $postCount;
 // echo 'Post Added';
 
 // UPDATE DATA
-$id = 1;
-$body = 'This is the updated post';
+// $id = 1;
+// $body = 'This is the updated post';
 
-$sql = 'UPDATE posts SET body = :body WHERE id = :id';
-$stmt = $pdo->prepare($sql);
-$stmt->execute(['id' => $id, 'body' => $body]);
-echo 'Post updated';
+// $sql = 'UPDATE posts SET body = :body WHERE id = :id';
+// $stmt = $pdo->prepare($sql);
+// $stmt->execute(['id' => $id, 'body' => $body]);
+// echo 'Post updated';
+
+
+// DELETE DATA
+// $id = 6;
+
+// $sql = 'DELETE FROM posts WHERE id = :id';
+// $stmt = $pdo->prepare($sql);
+// $stmt->execute(['id' => $id]);
+// echo "Post Deleted";
+
+// SEARCH DATA
+// $search = "%post%";
+// $sql = 'SELECT * FROM posts WHERE title LIKE ?';
+// $stmt = $pdo->prepare($sql);
+// $stmt->execute([$search]);
+// $posts = $stmt->fetchAll();
+// foreach ($posts as  $post) {
+//     echo $post->title . "<br>";
+// }
+
+
